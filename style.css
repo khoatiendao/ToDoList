@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 64%, rgba(0,212,255,1) 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo_list {
+    width: 580px;
+    background-color: #FFF;
+    border-radius: 2rem;
+}
+
+.todo_list_detail {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.title_todo {
+    font-size: 38px;
+}
+
+.title_img {
+    width: 35px;
+    margin-left: 10px;
+}
+
+.add_todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 35px;
+}
+
+.input_todo {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    transition: all 0.6s ease;
+}
+
+.add_button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    
+}
+
+.add_button:active {
+    transform: scale(1.2);
+}
+
+.list_task li {
+    font-size: 17px;
+    list-style-type: none;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    line-height: 2rem;
+}
+
+.list_task li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(./assets/image/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    top: 12px;
+    left: 8px;
+
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(./assets/image/checked.png);
+}
+
+ul li i {
+    position: absolute;
+    right: 0;
+    top: 19px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+ul li i:hover {
+    color: red;
+}
+
